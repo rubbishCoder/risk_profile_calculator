@@ -1,0 +1,13 @@
+node_modules
+package-lock.json
+
+android/.gradle
+android/.idea
+android/build
+android/app/build
+
+ios/Pods
+ios/Podfile.lock
+
+.vscode
+vendor

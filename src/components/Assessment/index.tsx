@@ -12,8 +12,10 @@ const Assessment = () => {
   const navigation = useNavigation<any>();
   const dispatch = useDispatch<any>();
 
-  const questions = useSelector((state: any) => state.questionsData.questions)
-  const selectedQuestionIndex = useSelector((state: any) => state.questionsData.selectedQuestionIndex)
+  const { questions, selectedQuestionIndex } = useSelector((state: any) => ({
+    questions: state.questionsData.questions,
+    selectedQuestionIndex: state.questionsData.selectedQuestionIndex
+  }))
 
   const selectedQuestion = questions[selectedQuestionIndex];
 

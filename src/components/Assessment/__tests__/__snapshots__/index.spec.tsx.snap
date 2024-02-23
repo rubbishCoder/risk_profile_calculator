@@ -1,0 +1,335 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Assessment verify snapshot 1`] = `
+<RCTSafeAreaView
+  style={
+    {
+      "backgroundColor": "#fe0133",
+      "flex": 1,
+    }
+  }
+>
+  <Text
+    style={
+      {
+        "color": "#ffffff",
+        "fontSize": 29,
+        "fontWeight": "bold",
+        "paddingHorizontal": 23,
+        "paddingTop": 23,
+      }
+    }
+  >
+    Question 1/1
+  </Text>
+  <RCTScrollView
+    contentContainerStyle={
+      {
+        "flexGrow": 1,
+        "padding": 23,
+      }
+    }
+  >
+    <View>
+      <Text
+        style={
+          {
+            "color": "#ffffff",
+            "fontSize": 29,
+            "fontWeight": "bold",
+            "marginBottom": 23,
+          }
+        }
+      />
+      <View
+        accessibilityState={
+          {
+            "busy": undefined,
+            "checked": undefined,
+            "disabled": undefined,
+            "expanded": undefined,
+            "selected": undefined,
+          }
+        }
+        accessibilityValue={
+          {
+            "max": undefined,
+            "min": undefined,
+            "now": undefined,
+            "text": undefined,
+          }
+        }
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          {
+            "alignItems": "center",
+            "backgroundColor": "#ffffff",
+            "borderRadius": 12,
+            "flexDirection": "row",
+            "marginBottom": 23,
+            "opacity": 1,
+            "padding": 23,
+            "shadowColor": "#3b393a",
+            "shadowOffset": {
+              "height": 4,
+              "width": -2,
+            },
+            "shadowOpacity": 0.8,
+            "shadowRadius": 3,
+            "width": "100%",
+          }
+        }
+      >
+        <View
+          style={
+            {
+              "alignItems": "center",
+              "borderRadius": 144,
+              "borderWidth": 1,
+              "height": 35,
+              "justifyContent": "center",
+              "width": 35,
+            }
+          }
+          testID="SELECTED_ICON"
+        />
+        <Text
+          style={
+            {
+              "color": "#000000",
+              "fontSize": 29,
+              "fontWeight": "bold",
+              "paddingHorizontal": 23,
+            }
+          }
+        >
+          Bad
+        </Text>
+      </View>
+      <View
+        accessibilityState={
+          {
+            "busy": undefined,
+            "checked": undefined,
+            "disabled": undefined,
+            "expanded": undefined,
+            "selected": undefined,
+          }
+        }
+        accessibilityValue={
+          {
+            "max": undefined,
+            "min": undefined,
+            "now": undefined,
+            "text": undefined,
+          }
+        }
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          {
+            "alignItems": "center",
+            "backgroundColor": "#ffffff",
+            "borderRadius": 12,
+            "flexDirection": "row",
+            "marginBottom": 23,
+            "opacity": 1,
+            "padding": 23,
+            "shadowColor": "#3b393a",
+            "shadowOffset": {
+              "height": 4,
+              "width": -2,
+            },
+            "shadowOpacity": 0.8,
+            "shadowRadius": 3,
+            "width": "100%",
+          }
+        }
+      >
+        <View
+          style={
+            {
+              "alignItems": "center",
+              "borderRadius": 144,
+              "borderWidth": 1,
+              "height": 35,
+              "justifyContent": "center",
+              "width": 35,
+            }
+          }
+          testID="SELECTED_ICON"
+        />
+        <Text
+          style={
+            {
+              "color": "#000000",
+              "fontSize": 29,
+              "fontWeight": "bold",
+              "paddingHorizontal": 23,
+            }
+          }
+        >
+          Good
+        </Text>
+      </View>
+      <View
+        accessibilityState={
+          {
+            "busy": undefined,
+            "checked": undefined,
+            "disabled": undefined,
+            "expanded": undefined,
+            "selected": undefined,
+          }
+        }
+        accessibilityValue={
+          {
+            "max": undefined,
+            "min": undefined,
+            "now": undefined,
+            "text": undefined,
+          }
+        }
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          {
+            "alignItems": "center",
+            "backgroundColor": "#ffffff",
+            "borderRadius": 12,
+            "flexDirection": "row",
+            "marginBottom": 23,
+            "opacity": 1,
+            "padding": 23,
+            "shadowColor": "#3b393a",
+            "shadowOffset": {
+              "height": 4,
+              "width": -2,
+            },
+            "shadowOpacity": 0.8,
+            "shadowRadius": 3,
+            "width": "100%",
+          }
+        }
+      >
+        <View
+          style={
+            {
+              "alignItems": "center",
+              "borderRadius": 144,
+              "borderWidth": 1,
+              "height": 35,
+              "justifyContent": "center",
+              "width": 35,
+            }
+          }
+          testID="SELECTED_ICON"
+        />
+        <Text
+          style={
+            {
+              "color": "#000000",
+              "fontSize": 29,
+              "fontWeight": "bold",
+              "paddingHorizontal": 23,
+            }
+          }
+        >
+          Very Good
+        </Text>
+      </View>
+    </View>
+  </RCTScrollView>
+  <View
+    style={
+      {
+        "flexDirection": "row",
+        "justifyContent": "space-between",
+        "padding": 29,
+      }
+    }
+  >
+    <View
+      accessibilityState={
+        {
+          "busy": undefined,
+          "checked": undefined,
+          "disabled": true,
+          "expanded": undefined,
+          "selected": undefined,
+        }
+      }
+      accessibilityValue={
+        {
+          "max": undefined,
+          "min": undefined,
+          "now": undefined,
+          "text": undefined,
+        }
+      }
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        {
+          "alignItems": "center",
+          "backgroundColor": "#3b393a",
+          "borderColor": "#3b393a",
+          "borderRadius": 12,
+          "borderWidth": 1,
+          "flex": 1,
+          "justifyContent": "center",
+          "marginLeft": undefined,
+          "opacity": 0.5,
+          "padding": 23,
+        }
+      }
+    >
+      <Text
+        style={
+          {
+            "color": "#ffffff",
+            "fontSize": 23,
+            "fontWeight": "bold",
+            "textAlign": "center",
+          }
+        }
+      >
+        Submit
+      </Text>
+    </View>
+  </View>
+</RCTSafeAreaView>
+`;

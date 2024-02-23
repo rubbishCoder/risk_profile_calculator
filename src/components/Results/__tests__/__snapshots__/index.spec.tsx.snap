@@ -1,0 +1,113 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Results verify snapshot 1`] = `
+<RCTSafeAreaView
+  style={
+    {
+      "alignItems": "center",
+      "backgroundColor": undefined,
+      "flex": 1,
+      "justifyContent": "center",
+    }
+  }
+>
+  <View
+    style={
+      {
+        "alignItems": "center",
+        "flex": 1,
+        "justifyContent": "center",
+      }
+    }
+  >
+    <View
+      style={
+        {
+          "alignItems": "center",
+          "backgroundColor": "#ffffff",
+          "borderRadius": 720,
+          "height": 288,
+          "justifyContent": "center",
+          "width": 288,
+        }
+      }
+    >
+      <Text
+        style={
+          {
+            "color": undefined,
+            "fontSize": 86,
+            "fontWeight": "bold",
+          }
+        }
+      >
+        %
+      </Text>
+    </View>
+    <Text
+      style={
+        {
+          "color": "#ffffff",
+          "fontSize": 35,
+          "fontWeight": "bold",
+          "padding": 23,
+          "textAlign": "center",
+        }
+      }
+    />
+    <View
+      accessibilityState={
+        {
+          "busy": undefined,
+          "checked": undefined,
+          "disabled": undefined,
+          "expanded": undefined,
+          "selected": undefined,
+        }
+      }
+      accessibilityValue={
+        {
+          "max": undefined,
+          "min": undefined,
+          "now": undefined,
+          "text": undefined,
+        }
+      }
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        {
+          "alignItems": "center",
+          "backgroundColor": "#3b393a",
+          "borderRadius": 17,
+          "justifyContent": "center",
+          "opacity": 1,
+          "paddingHorizontal": 29,
+          "paddingVertical": 23,
+        }
+      }
+    >
+      <Text
+        style={
+          {
+            "color": "#ffffff",
+            "fontSize": 35,
+            "fontWeight": "bold",
+            "textAlign": "center",
+          }
+        }
+      >
+        Re-Evaluate
+      </Text>
+    </View>
+  </View>
+</RCTSafeAreaView>
+`;

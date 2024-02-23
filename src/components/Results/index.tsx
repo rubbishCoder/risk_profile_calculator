@@ -39,7 +39,7 @@ const Results = () => {
       }
     }
   }, [riskProfileScore])
-
+ 
   return (
     <SafeAreaView style={{ ...styles.container, backgroundColor: resultData?.color }}>
       <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>

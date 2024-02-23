@@ -7,7 +7,7 @@ const RadioButton = ({ text = 'test', onPress = () => { }, selected = false }: a
 
     return (
         <TouchableOpacity style={styles.card} onPress={onPress} activeOpacity={1}>
-            <View style={styles.radioButtonOuter}>
+            <View testID={'SELECTED_ICON'} style={styles.radioButtonOuter}>
                 {selected && <View style={styles.radioButtonInner} />}
             </View>
             <Text style={styles.option}>{text}</Text>

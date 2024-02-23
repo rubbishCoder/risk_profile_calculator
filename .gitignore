@@ -11,3 +11,5 @@ ios/Podfile.lock
 
 .vscode
 vendor
+
+ios/risk_profile_calculator.xcworkspace/xcuserdata

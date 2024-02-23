@@ -1,0 +1,83 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home verify snapshot 1`] = `
+<RCTSafeAreaView
+  style={
+    {
+      "alignItems": "center",
+      "backgroundColor": "#fe0133",
+      "flex": 1,
+      "justifyContent": "center",
+    }
+  }
+>
+  <Text
+    style={
+      {
+        "color": "#ffffff",
+        "fontSize": 35,
+        "fontWeight": "bold",
+        "padding": 23,
+        "textAlign": "center",
+      }
+    }
+    testID="INTRO_TEXT"
+  >
+    Click the below button in order to take the assessment to find your 'Risk Profile Score'.
+  </Text>
+  <View
+    accessibilityState={
+      {
+        "busy": undefined,
+        "checked": undefined,
+        "disabled": undefined,
+        "expanded": undefined,
+        "selected": undefined,
+      }
+    }
+    accessibilityValue={
+      {
+        "max": undefined,
+        "min": undefined,
+        "now": undefined,
+        "text": undefined,
+      }
+    }
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      {
+        "alignItems": "center",
+        "backgroundColor": "#3b393a",
+        "borderRadius": 17,
+        "justifyContent": "center",
+        "opacity": 1,
+        "paddingHorizontal": 29,
+        "paddingVertical": 23,
+      }
+    }
+    testID="START_BUTTON"
+  >
+    <Text
+      style={
+        {
+          "color": "#ffffff",
+          "fontSize": 35,
+          "fontWeight": "bold",
+          "textAlign": "center",
+        }
+      }
+    >
+      Start
+    </Text>
+  </View>
+</RCTSafeAreaView>
+`;

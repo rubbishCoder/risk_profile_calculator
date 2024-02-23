@@ -8,10 +8,10 @@ const Home = () => {
 
   return (
     <SafeAreaView style={styles.container}>
-      <Text style={styles.text}>
+      <Text testID='INTRO_TEXT' style={styles.text}>
         Click the below button in order to take the assessment to find your 'Risk Profile Score'.
       </Text>
-      <TouchableOpacity style={styles.buttonContainer} activeOpacity={1}
+      <TouchableOpacity testID={'START_BUTTON'} style={styles.buttonContainer} activeOpacity={1}
         onPress={() => { navigation.dispatch(StackActions.replace('Assessment')); }}>
         <Text style={styles.buttonText}>Start</Text>
       </TouchableOpacity>

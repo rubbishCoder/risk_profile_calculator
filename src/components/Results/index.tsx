@@ -4,8 +4,8 @@ import { SafeAreaView, Text, TouchableOpacity, View } from 'react-native';
 import { useDispatch, useSelector } from 'react-redux';
 import Colors from '../../common/Colors';
 import RV from '../../common/utils/RV';
-import styles from './styles';
 import { resetQuestionDataState } from '../../reducers/questionsData';
+import styles from './styles';
 
 const Results = () => {
   const navigation = useNavigation<any>();
@@ -14,15 +14,21 @@ const Results = () => {
   const riskProfileScore = useSelector((state: any) => state.questionsData.riskProfileScore)
 
   const resultData = useMemo(() => {
-    if (riskProfileScore >= 80 && riskProfileScore <= 100) {
+    if (riskProfileScore === 100) {
       return {
-        text: `Congrats, you have got great\n'Risk profile score'.`,
+        text: `Congrats, your 'Risk profile score' is very good.`,
+        color: Colors.green
+      }
+    }
+    if (riskProfileScore >= 80 && riskProfileScore < 100) {
+      return {
+        text: `Congrats, your 'Risk profile score' is good.`,
         color: Colors.green
       }
     }
     if (riskProfileScore > 50 && riskProfileScore < 80) {
       return {
-        text: `Your 'Risk profile score' is not that great, need to improve.`,
+        text: `Your 'Risk profile score' is not that good, need to improve.`,
         color: Colors.yellow
       }
     }

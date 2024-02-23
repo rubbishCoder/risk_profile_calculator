@@ -63,3 +63,11 @@ npx pod-install ios
 -> Open `ios/risk_profile_calculator.xcworkspace` in _root_ of the project via 'Xcode'
 -> Selected the desired emulator from the list and click on the 'Build and Run' icon in the tool bar.
 -> App will get installed in the iOS emulator and open.
+
+# Unit Test cases
+
+All the unit test cases are written in the folder name __tests__ along with the components itself. Run the below comman from the _root_ of the project to run all the test cases.
+
+```bash
+npm run test
+```

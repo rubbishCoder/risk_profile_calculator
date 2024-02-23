@@ -1,9 +1,9 @@
-import { configureStore } from '@reduxjs/toolkit'
-import { questionsData } from './questionsData';
+import { configureStore } from '@reduxjs/toolkit';
+import questionsData from './questionsData';
 
 const store = configureStore({
     reducer: {
-        questionsData: questionsData.reducer
+        questionsData: questionsData
     }
 })
 

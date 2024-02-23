@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Results verify snapshot 1`] = `
+exports[`Results should create new snapshot and check whether it match with the previous snapshot 1`] = `
 <RCTSafeAreaView
   style={
     {

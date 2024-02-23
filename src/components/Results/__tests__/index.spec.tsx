@@ -30,14 +30,14 @@ describe('Results', () => {
         mockedNavigationDispatch.mockClear();
     });
 
-    it('verify snapshot', () => {
+    it('should create new snapshot and check whether it match with the previous snapshot', () => {
         const ResultsScreen = render(<Results />);
         const ResultsScreenJson = ResultsScreen.toJSON();
         expect(ResultsScreenJson).toMatchSnapshot();
     });
 
 
-    it(`renders 'very good message' if 100%`, () => {
+    it(`should render 'very good message' if 100%`, () => {
         jest.spyOn(Redux, 'useSelector').mockReturnValue(100);
         const ResultsScreen: any = render(<Results />);
         const messageComponent = ResultsScreen.getByText(`Congrats, your 'Risk profile score' is very good.`)
@@ -45,7 +45,7 @@ describe('Results', () => {
         expect(ResultsScreen.root.props.style.backgroundColor).toEqual(Colors.green)
     })
 
-    it(`renders 'good message' if 80% to 99%`, () => {
+    it(`should render 'good message' if 80% to 99%`, () => {
         jest.spyOn(Redux, 'useSelector').mockReturnValue(85);
         const ResultsScreen = render(<Results />);
         const messageComponent = ResultsScreen.getByText(`Congrats, your 'Risk profile score' is good.`)
@@ -53,7 +53,7 @@ describe('Results', () => {
         expect(ResultsScreen.root.props.style.backgroundColor).toEqual(Colors.green)
     })
 
-    it(`renders 'not good message' if 51% to 79%`, () => {
+    it(`should render 'not good message' if 51% to 79%`, () => {
         jest.spyOn(Redux, 'useSelector').mockReturnValue(55);
         const ResultsScreen = render(<Results />);
         const messageComponent = ResultsScreen.getByText(`Your 'Risk profile score' is not that good, need to improve.`)
@@ -61,7 +61,7 @@ describe('Results', () => {
         expect(ResultsScreen.root.props.style.backgroundColor).toEqual(Colors.yellow)
     })
 
-    it(`renders 'very poor' message if 100%`, () => {
+    it(`should render 'very poor' message if 100%`, () => {
         jest.spyOn(Redux, 'useSelector').mockReturnValue(35);
         const ResultsScreen = render(<Results />);
         const messageComponent = ResultsScreen.getByText(`Your 'Risk profile score' is very poor, need to work more on improving the score.`)
@@ -69,7 +69,7 @@ describe('Results', () => {
         expect(ResultsScreen.root.props.style.backgroundColor).toEqual(Colors.red)
     })
 
-    it(`navigate on re-evaluate`, () => {
+    it(`should navigate on re-evaluate`, () => {
         jest.spyOn(Redux, 'useDispatch').mockImplementation(() => mockedStoreDispatch);
         const ResultsScreen = render(<Results />);
         const reEvaluateComponent = ResultsScreen.getByText(`Re-Evaluate`)

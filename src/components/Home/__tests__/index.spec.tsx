@@ -20,26 +20,26 @@ describe('Home', () => {
         mockedNavigationDispatch.mockClear();
     });
 
-    it('verify snapshot', () => {
+    it('should create new snapshot and check whether it match with the previous snapshot', () => {
         const HomeScreen = render(<Home />);
         const HomeScreenJson = HomeScreen.toJSON();
         expect(HomeScreenJson).toMatchSnapshot();
     });
 
-    it('render intro text', () => {
+    it('should render introduction text', () => {
         const HomeScreen = render(<Home />);
         const introText = HomeScreen.getByTestId('INTRO_TEXT')
         expect(introText).toBeTruthy()
     });
 
 
-    it('render start button', () => {
+    it('should render Start button', () => {
         const HomeScreen = render(<Home />);
         const startButton = HomeScreen.getByTestId('START_BUTTON')
         expect(startButton).toBeTruthy()
     });
 
-    it('navigate on start press', () => {
+    it('should navigate when Start button is pressed', () => {
         const HomeScreen = render(<Home />);
         const startButton = HomeScreen.getByTestId('START_BUTTON')
         fireEvent.press(startButton);

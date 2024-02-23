@@ -3,15 +3,18 @@ import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import Colors from '../Colors';
 import RV from '../utils/RV';
 
-const RadioButton = ({ text = 'test', onPress = () => { }, selected = false }: any) => {
+const RadioButton = ({ text = null, onPress = null, selected = false }: any) => {
 
     return (
-        <TouchableOpacity style={styles.card} onPress={onPress} activeOpacity={1}>
-            <View testID={'SELECTED_ICON'} style={styles.radioButtonOuter}>
-                {selected && <View style={styles.radioButtonInner} />}
-            </View>
-            <Text style={styles.option}>{text}</Text>
-        </TouchableOpacity>
+        <>
+            {text && onPress &&
+                <TouchableOpacity style={styles.card} onPress={onPress} activeOpacity={1}>
+                    <View testID={'SELECTED_ICON'} style={styles.radioButtonOuter}>
+                        {selected && <View style={styles.radioButtonInner} />}
+                    </View>
+                    <Text style={styles.option}>{text}</Text>
+                </TouchableOpacity>}
+        </>
     )
 }
 

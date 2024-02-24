@@ -1,7 +1,7 @@
 import { StackActions, useNavigation } from '@react-navigation/native';
-import React from 'react';
+import React, { useMemo } from 'react';
 import { SafeAreaView, ScrollView, Text, TouchableOpacity, View } from 'react-native';
-import { useDispatch, useSelector } from 'react-redux';
+import { shallowEqual, useDispatch, useSelector } from 'react-redux';
 import Colors from '../../common/Colors';
 import RadioButton from '../../common/components/RadioButton';
 import RV from '../../common/utils/RV';
@@ -15,20 +15,46 @@ const Assessment = () => {
   const { questions, selectedQuestionIndex } = useSelector((state: any) => ({
     questions: state.questionsData.questions,
     selectedQuestionIndex: state.questionsData.selectedQuestionIndex
-  }))
+  }), shallowEqual)
 
-  const selectedQuestion = questions[selectedQuestionIndex];
+  const selectedQuestion = useMemo(() => questions[selectedQuestionIndex], [questions, selectedQuestionIndex]);
 
   const calculateRiskProfileScore = () => {
-    const totalScore = questions?.reduce((acc: any, obj: any) => acc + obj?.options?.length, 0)
+    const totalOfHighestScores = questions?.reduce((acc1: any, obj1: any) => {
+      const maxScore = obj1?.options.reduce((acc2: any, obj2: any) => acc2 > obj2.score ? acc2 : obj2.score, 0);
+      return acc1 + maxScore
+    }, 0);
+
     const userScore = questions?.reduce((acc: any, obj: any) => acc + obj?.selectedOption?.score, 0)
 
-    let riskProfileScore: any = (100 * userScore) / totalScore;
+    let riskProfileScore: any = (100 * userScore) / totalOfHighestScores;
     riskProfileScore = parseInt(riskProfileScore);
 
     dispatch(setRiskProfileScore(riskProfileScore))
 
     navigation.dispatch(StackActions.replace('Results'));
+  }
+
+  const onOptionSelect = (d: any) => {
+    let newQuestions = questions?.map((v: any, i: any) => {
+      let newData = v;
+      if (i === selectedQuestionIndex) {
+        newData = {
+          ...v,
+          selectedOption: d
+        }
+      }
+      return newData
+    })
+    dispatch(setQuestions(newQuestions))
+  }
+
+  const onSubmit = () => {
+    if (selectedQuestionIndex === questions?.length - 1) {
+      calculateRiskProfileScore();
+    } else {
+      dispatch(setSelectedQuestionIndex(selectedQuestionIndex + 1))
+    }
   }
 
   return (
@@ -43,19 +69,7 @@ const Assessment = () => {
                 <RadioButton
                   key={d?.value + d?.id}
                   text={d?.value}
-                  onPress={() => {
-                    let newQuestions = questions?.map((v: any, i: any) => {
-                      let newData = v;
-                      if (i === selectedQuestionIndex) {
-                        newData = {
-                          ...v,
-                          selectedOption: d
-                        }
-                      }
-                      return newData
-                    })
-                    dispatch(setQuestions(newQuestions))
-                  }}
+                  onPress={() => { onOptionSelect(d) }}
                   selected={selectedQuestion?.selectedOption?.id === d?.id} />
               ))}
           </ScrollView>
@@ -73,13 +87,7 @@ const Assessment = () => {
                 marginLeft: selectedQuestionIndex > 0 ? 16 : undefined,
                 opacity: !selectedQuestion?.selectedOption ? 0.5 : 1
               }}
-              onPress={() => {
-                if (selectedQuestionIndex === questions?.length - 1) {
-                  calculateRiskProfileScore();
-                } else {
-                  dispatch(setSelectedQuestionIndex(selectedQuestionIndex + 1))
-                }
-              }}>
+              onPress={onSubmit}>
               <Text style={styles.nextButtonText}>{selectedQuestionIndex === questions?.length - 1 ? `Submit` : `Next >`}</Text>
             </TouchableOpacity>
           </View>

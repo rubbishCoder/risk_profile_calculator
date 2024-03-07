@@ -8,6 +8,18 @@ import RV from '../../common/utils/RV';
 import { setQuestions, setRiskProfileScore, setSelectedQuestionIndex } from '../../reducers/questionsData';
 import styles from './styles';
 
+interface Option {
+  id: number,
+  value: string,
+  score: number
+}
+
+interface Question {
+  question: string,
+  options: Array<Option>,
+  selectedOption: Option
+}
+
 const Assessment = () => {
   const navigation = useNavigation<any>();
   const dispatch = useDispatch<any>();
@@ -20,8 +32,8 @@ const Assessment = () => {
   const selectedQuestion = useMemo(() => questions[selectedQuestionIndex], [questions, selectedQuestionIndex]);
 
   const calculateRiskProfileScore = () => {
-    const totalOfHighestScores = questions?.reduce((acc1: any, obj1: any) => {
-      const maxScore = obj1?.options.reduce((acc2: any, obj2: any) => acc2 > obj2.score ? acc2 : obj2.score, 0);
+    const totalOfHighestScores = questions?.reduce((acc1: number, obj1: Question) => {
+      const maxScore: number = obj1?.options.reduce((acc2: number, obj2: Option) => acc2 > obj2.score ? acc2 : obj2.score, 0);
       return acc1 + maxScore
     }, 0);
 
@@ -58,16 +70,18 @@ const Assessment = () => {
   }
 
   return (
-    <SafeAreaView style={{ flex: 1, backgroundColor: Colors.red, }}>
+    <SafeAreaView style={{ flex: 1, backgroundColor: Colors.white }}>
       {selectedQuestion &&
         <>
           <Text style={styles.questionCount}>{`Question ${selectedQuestionIndex + 1}/${questions?.length}`}</Text>
           <ScrollView contentContainerStyle={{ flexGrow: 1, padding: RV(16) }}>
-            <Text style={styles.question}>{selectedQuestion?.question}</Text>
+            <View style={styles.textContainer}>
+              <Text style={styles.question}>{selectedQuestion?.question}</Text>
+            </View>
             {selectedQuestion?.options?.length > 0 &&
-              selectedQuestion?.options?.map((d: any) => (
+              selectedQuestion.options.map((d: Option) => (
                 <RadioButton
-                  key={d?.value + d?.id}
+                  key={d?.value}
                   text={d?.value}
                   onPress={() => { onOptionSelect(d) }}
                   selected={selectedQuestion?.selectedOption?.id === d?.id} />

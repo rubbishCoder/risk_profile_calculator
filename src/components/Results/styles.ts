@@ -26,16 +26,17 @@ const styles = StyleSheet.create({
     buttonContainer: {
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: Colors.black3,
         paddingVertical: RV(16),
         paddingHorizontal: RV(20),
-        borderRadius: RV(12)
+        borderRadius: RV(12),
+        borderWidth: 2,
+        borderColor: Colors.white,
     },
     buttonText: {
         fontSize: RV(24),
         textAlign: 'center',
-        color: Colors.white,
-        fontWeight: 'bold'
+        fontWeight: 'bold',
+        color: Colors.white
     },
 });
 

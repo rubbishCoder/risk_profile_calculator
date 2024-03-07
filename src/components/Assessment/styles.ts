@@ -3,6 +3,13 @@ import Colors from '../../common/Colors';
 import RV from '../../common/utils/RV';
 
 const styles = StyleSheet.create({
+    textContainer: {
+        backgroundColor: Colors.blue2,
+        width: '100%',
+        borderRadius: RV(10),
+        padding: RV(16),
+        marginBottom: RV(16)
+    },
     footerContainer: {
         padding: RV(20),
         flexDirection: 'row',
@@ -15,7 +22,7 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         borderWidth: 1,
-        borderColor: Colors.black,
+        borderColor: Colors.blue2,
         borderRadius: RV(8)
     },
     nextButton: {
@@ -24,14 +31,14 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         borderWidth: 1,
-        borderColor: Colors.black3,
+        borderColor: Colors.blue2,
         borderRadius: RV(8),
-        backgroundColor: Colors.black3
+        backgroundColor: Colors.blue2
     },
     prevButtonText: {
         fontSize: RV(16),
         textAlign: 'center',
-        color: Colors.black,
+        color: Colors.blue2,
         fontWeight: 'bold'
     },
     nextButtonText: {
@@ -44,14 +51,13 @@ const styles = StyleSheet.create({
         paddingHorizontal: RV(16),
         paddingTop: RV(16),
         fontSize: RV(20),
-        color: Colors.white,
+        color: Colors.blue2,
         fontWeight: 'bold'
     },
     question: {
         fontSize: RV(20),
         color: Colors.white,
         fontWeight: 'bold',
-        marginBottom: RV(16)
     }
 });
 

@@ -39,7 +39,7 @@ const Results = () => {
       }
     }
   }, [riskProfileScore])
- 
+
   return (
     <SafeAreaView style={{ ...styles.container, backgroundColor: resultData?.color }}>
       <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
@@ -49,12 +49,12 @@ const Results = () => {
         <Text style={styles.text}>
           {resultData?.text}
         </Text>
-        <TouchableOpacity style={styles.buttonContainer} activeOpacity={1}
+        <TouchableOpacity style={{ ...styles.buttonContainer, backgroundColor: resultData?.color }}
           onPress={() => {
             dispatch(resetQuestionDataState())
             navigation.dispatch(StackActions.replace('Assessment'));
           }}>
-          <Text style={styles.buttonText}>Re-Evaluate</Text>
+          <Text style={{ ...styles.buttonText }}>Re-Evaluate</Text>
         </TouchableOpacity>
       </View>
     </SafeAreaView>

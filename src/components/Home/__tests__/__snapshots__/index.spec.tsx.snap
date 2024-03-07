@@ -5,66 +5,23 @@ exports[`Home should create new snapshot and check whether it match with the pre
   style={
     {
       "alignItems": "center",
-      "backgroundColor": "#fe0133",
+      "backgroundColor": "#ffffff",
       "flex": 1,
       "justifyContent": "center",
     }
   }
 >
-  <Text
-    style={
-      {
-        "color": "#ffffff",
-        "fontSize": 35,
-        "fontWeight": "bold",
-        "padding": 23,
-        "textAlign": "center",
-      }
-    }
-    testID="INTRO_TEXT"
-  >
-    Click the below button in order to take the assessment to find your 'Risk Profile Score'.
-  </Text>
   <View
-    accessibilityState={
-      {
-        "busy": undefined,
-        "checked": undefined,
-        "disabled": undefined,
-        "expanded": undefined,
-        "selected": undefined,
-      }
-    }
-    accessibilityValue={
-      {
-        "max": undefined,
-        "min": undefined,
-        "now": undefined,
-        "text": undefined,
-      }
-    }
-    accessible={true}
-    collapsable={false}
-    focusable={true}
-    onClick={[Function]}
-    onResponderGrant={[Function]}
-    onResponderMove={[Function]}
-    onResponderRelease={[Function]}
-    onResponderTerminate={[Function]}
-    onResponderTerminationRequest={[Function]}
-    onStartShouldSetResponder={[Function]}
     style={
       {
         "alignItems": "center",
-        "backgroundColor": "#3b393a",
-        "borderRadius": 17,
+        "backgroundColor": "#09bef5",
+        "borderRadius": 72,
+        "height": 432,
         "justifyContent": "center",
-        "opacity": 1,
-        "paddingHorizontal": 29,
-        "paddingVertical": 23,
+        "width": "90%",
       }
     }
-    testID="START_BUTTON"
   >
     <Text
       style={
@@ -72,12 +29,68 @@ exports[`Home should create new snapshot and check whether it match with the pre
           "color": "#ffffff",
           "fontSize": 35,
           "fontWeight": "bold",
+          "padding": 23,
           "textAlign": "center",
         }
       }
+      testID="INTRO_TEXT"
     >
-      Start
+      Click the below button in order to take the assessment to find your 'Risk Profile Score'.
     </Text>
+    <View
+      accessibilityState={
+        {
+          "busy": undefined,
+          "checked": undefined,
+          "disabled": undefined,
+          "expanded": undefined,
+          "selected": undefined,
+        }
+      }
+      accessibilityValue={
+        {
+          "max": undefined,
+          "min": undefined,
+          "now": undefined,
+          "text": undefined,
+        }
+      }
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        {
+          "alignItems": "center",
+          "backgroundColor": "#ffffff",
+          "borderRadius": 17,
+          "justifyContent": "center",
+          "opacity": 1,
+          "paddingHorizontal": 29,
+          "paddingVertical": 23,
+        }
+      }
+      testID="START_BUTTON"
+    >
+      <Text
+        style={
+          {
+            "color": "#09bef5",
+            "fontSize": 35,
+            "fontWeight": "bold",
+            "textAlign": "center",
+          }
+        }
+      >
+        Start
+      </Text>
+    </View>
   </View>
 </RCTSafeAreaView>
 `;

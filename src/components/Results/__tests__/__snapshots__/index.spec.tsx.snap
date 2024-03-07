@@ -86,8 +86,10 @@ exports[`Results should create new snapshot and check whether it match with the 
       style={
         {
           "alignItems": "center",
-          "backgroundColor": "#3b393a",
+          "backgroundColor": undefined,
+          "borderColor": "#ffffff",
           "borderRadius": 17,
+          "borderWidth": 2,
           "justifyContent": "center",
           "opacity": 1,
           "paddingHorizontal": 29,

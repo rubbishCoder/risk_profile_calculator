@@ -4,7 +4,7 @@ exports[`Assessment should create new snapshot and check whether it match with t
 <RCTSafeAreaView
   style={
     {
-      "backgroundColor": "#fe0133",
+      "backgroundColor": "#ffffff",
       "flex": 1,
     }
   }
@@ -12,7 +12,7 @@ exports[`Assessment should create new snapshot and check whether it match with t
   <Text
     style={
       {
-        "color": "#ffffff",
+        "color": "#09bef5",
         "fontSize": 29,
         "fontWeight": "bold",
         "paddingHorizontal": 23,
@@ -31,16 +31,27 @@ exports[`Assessment should create new snapshot and check whether it match with t
     }
   >
     <View>
-      <Text
+      <View
         style={
           {
-            "color": "#ffffff",
-            "fontSize": 29,
-            "fontWeight": "bold",
+            "backgroundColor": "#09bef5",
+            "borderRadius": 14,
             "marginBottom": 23,
+            "padding": 23,
+            "width": "100%",
           }
         }
-      />
+      >
+        <Text
+          style={
+            {
+              "color": "#ffffff",
+              "fontSize": 29,
+              "fontWeight": "bold",
+            }
+          }
+        />
+      </View>
       <View
         accessibilityState={
           {
@@ -73,18 +84,13 @@ exports[`Assessment should create new snapshot and check whether it match with t
           {
             "alignItems": "center",
             "backgroundColor": "#ffffff",
+            "borderColor": "#09bef5",
             "borderRadius": 12,
+            "borderWidth": 1,
             "flexDirection": "row",
             "marginBottom": 23,
             "opacity": 1,
             "padding": 23,
-            "shadowColor": "#3b393a",
-            "shadowOffset": {
-              "height": 4,
-              "width": -2,
-            },
-            "shadowOpacity": 0.8,
-            "shadowRadius": 3,
             "width": "100%",
           }
         }
@@ -93,6 +99,7 @@ exports[`Assessment should create new snapshot and check whether it match with t
           style={
             {
               "alignItems": "center",
+              "borderColor": "#67686b",
               "borderRadius": 144,
               "borderWidth": 1,
               "height": 35,
@@ -105,7 +112,7 @@ exports[`Assessment should create new snapshot and check whether it match with t
         <Text
           style={
             {
-              "color": "#000000",
+              "color": "#67686b",
               "fontSize": 29,
               "fontWeight": "bold",
               "paddingHorizontal": 23,
@@ -147,18 +154,13 @@ exports[`Assessment should create new snapshot and check whether it match with t
           {
             "alignItems": "center",
             "backgroundColor": "#ffffff",
+            "borderColor": "#09bef5",
             "borderRadius": 12,
+            "borderWidth": 1,
             "flexDirection": "row",
             "marginBottom": 23,
             "opacity": 1,
             "padding": 23,
-            "shadowColor": "#3b393a",
-            "shadowOffset": {
-              "height": 4,
-              "width": -2,
-            },
-            "shadowOpacity": 0.8,
-            "shadowRadius": 3,
             "width": "100%",
           }
         }
@@ -167,6 +169,7 @@ exports[`Assessment should create new snapshot and check whether it match with t
           style={
             {
               "alignItems": "center",
+              "borderColor": "#67686b",
               "borderRadius": 144,
               "borderWidth": 1,
               "height": 35,
@@ -179,7 +182,7 @@ exports[`Assessment should create new snapshot and check whether it match with t
         <Text
           style={
             {
-              "color": "#000000",
+              "color": "#67686b",
               "fontSize": 29,
               "fontWeight": "bold",
               "paddingHorizontal": 23,
@@ -221,18 +224,13 @@ exports[`Assessment should create new snapshot and check whether it match with t
           {
             "alignItems": "center",
             "backgroundColor": "#ffffff",
+            "borderColor": "#09bef5",
             "borderRadius": 12,
+            "borderWidth": 1,
             "flexDirection": "row",
             "marginBottom": 23,
             "opacity": 1,
             "padding": 23,
-            "shadowColor": "#3b393a",
-            "shadowOffset": {
-              "height": 4,
-              "width": -2,
-            },
-            "shadowOpacity": 0.8,
-            "shadowRadius": 3,
             "width": "100%",
           }
         }
@@ -241,6 +239,7 @@ exports[`Assessment should create new snapshot and check whether it match with t
           style={
             {
               "alignItems": "center",
+              "borderColor": "#67686b",
               "borderRadius": 144,
               "borderWidth": 1,
               "height": 35,
@@ -253,7 +252,7 @@ exports[`Assessment should create new snapshot and check whether it match with t
         <Text
           style={
             {
-              "color": "#000000",
+              "color": "#67686b",
               "fontSize": 29,
               "fontWeight": "bold",
               "paddingHorizontal": 23,
@@ -305,8 +304,8 @@ exports[`Assessment should create new snapshot and check whether it match with t
       style={
         {
           "alignItems": "center",
-          "backgroundColor": "#3b393a",
-          "borderColor": "#3b393a",
+          "backgroundColor": "#09bef5",
+          "borderColor": "#09bef5",
           "borderRadius": 12,
           "borderWidth": 1,
           "flex": 1,
